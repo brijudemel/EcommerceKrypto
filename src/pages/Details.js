@@ -1,4 +1,9 @@
 import React, { useEffect,useState } from 'react'
+import {handleLogout} from '../firebase'
+import { signOutAction } from '../redux/actions/userActions';
+import { useDispatch } from 'react-redux';
+import removeCookie from '../cookieHandler/removeCookie'
+import {useNavigate} from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import ItemCard from '../components/ItemCard'
 import styles from '../styles/home.module.css'
@@ -6,6 +11,8 @@ import axios from 'axios'
 
 
 const Home = () => {
+  const dispatch=useDispatch()
+  const navigate=useNavigate()
   const [products,setProducts] = useState(null)
 
   const getProducts=async()=>{
@@ -24,7 +31,12 @@ const Home = () => {
     getProducts()
   },[])
 
- 
+  const handleLogoutCall=()=>{
+        handleLogout()
+        dispatch(signOutAction())
+        removeCookie('uname')
+        navigate('/login')
+    }
   return (
     <>
       <Navbar />
@@ -50,6 +62,7 @@ const Home = () => {
       }
       </div>
       
+      <button onClick={()=>handleLogoutCall()}>LogOUT</button>
     </>
   )
 }
