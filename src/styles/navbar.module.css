@@ -1,0 +1,25 @@
+.navbarContainer{
+    top:0;
+    width: 100%;
+    background-color: #59C0FF;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.navItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    /* padding: 2% 0%; */
+}
+
+.navItems div {
+    cursor: pointer;
+}

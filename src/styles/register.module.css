@@ -1,0 +1,46 @@
+.outerBox{
+    /* width: 100%; */
+    margin: 20vh auto 0 auto;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+}
+.innerBox{
+    width: 50%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2% ;
+
+}
+
+.innerBox h1{
+    margin-bottom: 5%;
+}
+.innerBox input{
+    border-radius: 1rem;
+    background-color: #F4F6F7;
+    color: black;
+    padding: 2%;
+    border: 0px;
+    width: 95%;
+    margin-bottom: 2%;
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    color: #59C0FF;
+
+}
+
+.footer button{
+    background-color: #59C0FF;
+    color: white;
+    padding: 1% 3%;
+    border: 0px;
+    border-radius: 2rem;
+    width: 10rem;
+}
